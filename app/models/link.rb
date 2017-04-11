@@ -1,5 +1,6 @@
 class Link < ApplicationRecord
   def self.top_ten
-    where('updated_at > ?', 24.hours.ago).limit(10)
+    LinkService.get_top_ten.map do |link|
+      new(link)
   end
 end

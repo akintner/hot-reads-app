@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "GET /api/v1/links" do
-  it "returns top ten links" do
+  scenario "returns top ten links" do
     one = Link.create(title: "super neat", url: "http://www.neato.com")
     two = Link.create(title: "wahoo", url: "http://www.google.com")
     three = Link.create(title: "nice one", url: "http://www.chicken.com")
-    four = Link.create(title: "star trek is great", url: "http://www.dogs.com", updated_at: "Sun, 9 Apr 2017 12:54:47 UTC +00:00")
+    four = Link.create(title: "star trek is great", url: "http://www.dogs.com")
     five = Link.create(title: "star wars is great", url: "http://www.elephants.com")
     six = Link.create(title: "whoop", url: "http://www.whoop.com")
     seven = Link.create(title: "penelope", url: "http://www.penelope.com")

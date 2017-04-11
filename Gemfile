@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -24,6 +25,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'vcr'
 end
 
 group :development do
