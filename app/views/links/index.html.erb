@@ -1,8 +1,11 @@
 <section class="container">
-  <h1>The Current Top Ten Links from URL Lockbox<%= link_to "URL Lockbox", "#" %></h1>
+  <h1>The Current Top Ten Links from URL Lockbox</h1>
 
   <% @links.each do |link| %>
-    <%= link_to link.url %>: Read <%= link.read_count %> times
-    <hr>
+    <% if link.first %>
+      <%= "Hot Link" %>
+    <% end %>
+    <%= link.title %>
+    <%= link_to link.url %>
   <% end %>
 </section>
