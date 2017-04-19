@@ -1,11 +1,10 @@
 <section class="container">
-  <h1>The Current Top Ten Links from URL Lockbox</h1>
+  <h1 style="color:cornflowerblue">The Current Top Ten Links from URL Lockbox</h1>
 
   <% @links.each do |link| %>
-    <% if link.first %>
-      <%= "Hot Link" %>
-    <% end %>
-    <%= link.title %>
-    <%= link_to link.url %>
+  <ul>
+    <li style="color:#16C982">Link Title: <strong><%= link[:title] %></strong>
+      <p>Link Url: <strong><%= link[:url] %></strong></p></li>
+  </ul>
   <% end %>
 </section>
